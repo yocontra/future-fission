@@ -40,13 +40,21 @@ var Photo = fission.component({
 
 TODO
 
-## Data Binding (AKA Model and Collection Views)
+## Model & Collection Views
 
 TODO
 
 ## Routing
 
 TODO
+
+## Global communition / event bus / deep communication
+
+TODO
+
+## User Object / Auth 
+
+We need a new way to do this with browserify 
 
 ## Responsive
 
