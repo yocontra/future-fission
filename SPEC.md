@@ -40,7 +40,7 @@ var Photo = fission.component({
 
 TODO
 
-## Model Views and Collection Views
+## Data Binding (AKA Model and Collection Views)
 
 TODO
 
