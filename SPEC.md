@@ -2,7 +2,7 @@
 
 ## Components
 
-React can be too verbose and clunky sometimes. A more intuitive API should be exposed to make development feel more natural and eliminate having to look at the docs.
+React can be too verbose and clunky, which causes a lot of dependence on the documentation to figure out the correct method names. A more intuitive API should be exposed to make development feel more natural and eliminate this constraint.
 
 ```js
 var Photo = fission.component({
