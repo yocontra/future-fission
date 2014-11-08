@@ -8,9 +8,9 @@ React can be too verbose and clunky, which causes a lot of dependence on the doc
 var Photo = fission.component({
   // prop validation will resemble mongoose schemas
   props: {
-    username: String,
-    height: Number,
-    width: Number
+    username: 'string',
+    height: 'number',
+    width: 'number'
   },
   
   // init = getInitialState
@@ -38,7 +38,17 @@ var Photo = fission.component({
 
 ## Models and Collections
 
-TODO
+Ampersand models and collections under the hood, with some nice stuff on top.
+
+### Models
+
+```js
+```
+
+### Collections
+
+```js
+```
 
 ## Data Binding (AKA Model and Collection Views)
 
@@ -78,6 +88,10 @@ var photo = fission.component({
 });
 ```
 
+## Internationalization and Localization
+
+TODO (L20n.js?)
+
 ## Animation
 
 TODO
@@ -85,6 +99,10 @@ TODO
 ## State Batching
 
 Fission will only diff/render state changes once per animation frame. This will lead to a smoother user experience and conserve CPU cycles. See [this repo](https://github.com/petehunt/react-raf-batching) for an example implementation.
+
+## Application
+
+TODO
 
 ## Testing
 
