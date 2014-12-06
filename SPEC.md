@@ -68,6 +68,7 @@ Responsive media becomes a first class state object on components. When responsi
 
 ```js
 var photo = fission.component({
+  responsive: true,
   props: {
     username: String,
     height: Number,
