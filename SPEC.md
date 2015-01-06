@@ -8,9 +8,9 @@ React can be too verbose and clunky, which causes a lot of dependence on the doc
 var Photo = fission.component({
   // prop validation will resemble mongoose schemas
   props: {
-    username: 'string',
-    height: 'number',
-    width: 'number'
+    username: String,
+    height: Number,
+    width: Number
   },
   
   // init = getInitialState
@@ -43,11 +43,15 @@ Ampersand models and collections under the hood, with some nice stuff on top.
 ### Models
 
 ```js
+// prop validation will resemble mongoose schemas
+// event hook functions should have same naming as component
 ```
 
 ### Collections
 
 ```js
+// prop validation will resemble mongoose schemas
+// event hook functions should have same naming as component
 ```
 
 ## Data Binding (AKA Model and Collection Views)
@@ -56,7 +60,7 @@ TODO
 
 ## Routing
 
-TODO
+TODO (react-router?)
 
 ## Responsive
 
@@ -68,6 +72,7 @@ Responsive media becomes a first class state object on components. When responsi
 
 ```js
 var photo = fission.component({
+  // tells fission to include this.media information and re-render on change
   responsive: true,
   props: {
     username: String,
@@ -103,7 +108,7 @@ Fission will only diff/render state changes once per animation frame. This will 
 
 ## Application
 
-TODO
+TODO, central config location and place to set up data stores
 
 ## Testing
 
