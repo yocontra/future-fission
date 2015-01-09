@@ -98,6 +98,39 @@ var photo = fission.component({
 
 TODO (L20n.js?)
 
+## DOM Sugar
+
+###  null props inference
+
+Having to specify `DOM.h3(null, 'Text here')` is annoying. If the first argument is a renderable then props should be inferred as null. This allows for `DOM.h3('Text here')` or `DOM.div(DOM.h3('Text here'), DOM.h3('Text here'))`
+
+### classNames = classSet wrapper
+
+The react classSet addon is powerful, but not included by default which makes it clunky to use.
+
+```js
+DOM.div({
+  classNames: {
+    active: this.state.active,
+    bold: true,
+    italic: false
+  }
+}, 'Test');
+```
+
+should be the equivalent of
+
+```js
+var cx = require('react/addons').addons.classSet;
+DOM.div({
+  className: cx({
+    active: this.state.active,
+    bold: true,
+    italic: false
+  })
+}, 'Test');
+```
+
 ## Animation
 
 TODO
