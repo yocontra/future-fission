@@ -135,6 +135,8 @@ DOM.div({
 
 TODO
 
+[react-tween-state](https://github.com/chenglou/react-tween-state) sugar. [react-state-stream](https://github.com/chenglou/react-state-stream) sugar
+
 ## State Batching
 
 Fission will only diff/render state changes once per animation frame. This will lead to a smoother user experience and conserve CPU cycles. See [this repo](https://github.com/petehunt/react-raf-batching) for an example implementation.
