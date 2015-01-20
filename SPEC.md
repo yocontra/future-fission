@@ -102,7 +102,7 @@ TODO (L20n.js?)
 
 TODO:
 
-![https://github.com/rackt/react-a11y](https://github.com/rackt/react-a11y)
+[https://github.com/rackt/react-a11y](https://github.com/rackt/react-a11y)
 
 ## DOM Sugar
 
