@@ -60,7 +60,48 @@ TODO
 
 ## Routing
 
-TODO (react-router?)
+A declarative layer on top of react-router should be used.
+
+```js
+var appRouter = Router({
+  // Route = /
+  splash: {
+    path: '/',
+    view: SomeReactComponent
+  },
+  // Route = /login
+  login: {
+    path: 'login',
+    view: SomeReactComponent
+  },
+  // Route = /home
+  home: {
+    path: 'home',
+    view: SomeReactComponent,
+    children: {
+      // Route = /home, this is a default subview of home with no path specified
+      dashboard: {
+        default: true,
+        view: SomeReactComponent
+      },
+      // Route = /home/statistics, this is a subview of home
+      stats: {
+        path: 'statistics',
+        view: SomeReactComponent
+      },
+      // Route = /home/job/123, this is a subview of home
+      job: {
+        path: 'job/:jobId',
+        view: SomeReactComponent
+      }
+    }
+  }
+});
+
+appRouter.start(document.body);
+```
+
+[fission-router](https://github.com/fissionjs/fission-router) for initial implementation.
 
 ## Responsive
 
