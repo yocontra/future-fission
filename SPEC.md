@@ -145,6 +145,10 @@ TODO:
 
 [https://github.com/rackt/react-a11y](https://github.com/rackt/react-a11y)
 
+## Data Fetching
+
+Use a model similar to (or just use) Relay, where data dependencies are specified in the components to avoid prop miscommunication.
+
 ## DOM Sugar
 
 ###  null props inference
