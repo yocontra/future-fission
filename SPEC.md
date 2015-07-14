@@ -14,6 +14,7 @@ var Photo = fission.component({
   },
   
   // init = getInitialState
+  // can also just be an object
   init: function(){},
 
   // defaults = getDefaultProps
@@ -36,27 +37,9 @@ var Photo = fission.component({
 });
 ```
 
-## Models and Collections
+## Data
 
-Ampersand models and collections under the hood, with some nice stuff on top.
-
-### Models
-
-```js
-// prop validation will resemble mongoose schemas
-// event hook functions should have same naming as component
-```
-
-### Collections
-
-```js
-// prop validation will resemble mongoose schemas
-// event hook functions should have same naming as component
-```
-
-## Data Binding (AKA Model and Collection Views)
-
-TODO
+Using Relay (or Turbine for interim) to gather data via graphql
 
 ## Routing
 
@@ -145,56 +128,13 @@ TODO:
 
 [https://github.com/rackt/react-a11y](https://github.com/rackt/react-a11y)
 
-## Data Fetching
-
-Use a model similar to (or just use) Relay, where data dependencies are specified in the components to avoid prop miscommunication.
-
-## DOM Sugar
-
-###  null props inference
-
-Having to specify `DOM.h3(null, 'Text here')` is annoying. If the first argument is a renderable then props should be inferred as null. This allows for `DOM.h3('Text here')` or `DOM.div(DOM.h3('Text here'), DOM.h3('Text here'))`
-
-### classNames = classSet wrapper
-
-The react classSet addon is powerful, but not included by default which makes it clunky to use.
-
-```js
-DOM.div({
-  classNames: {
-    active: this.state.active,
-    bold: true,
-    italic: false
-  }
-}, 'Test');
-```
-
-should be the equivalent of
-
-```js
-var cx = require('react/addons').addons.classSet;
-DOM.div({
-  className: cx({
-    active: this.state.active,
-    bold: true,
-    italic: false
-  })
-}, 'Test');
-```
-
 ## Animation
 
-TODO
-
-[react-tween-state](https://github.com/chenglou/react-tween-state) sugar. [react-state-stream](https://github.com/chenglou/react-state-stream) sugar
+[react-motion](https://github.com/chenglou/react-motion)
 
 ## State Batching
 
 Fission will only diff/render state changes once per animation frame. This will lead to a smoother user experience and conserve CPU cycles. See [this repo](https://github.com/petehunt/react-raf-batching) for an example implementation.
-
-## Application
-
-TODO, central config location and place to set up data stores
 
 ## Testing
 
